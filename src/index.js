@@ -25,6 +25,8 @@ class Board extends React.Component {
   }
 
   handleClick(i) {
+    // create a copy of squares, replace the data with a new copy which has the desired changes, immutability 
+    // is to prefer for: detecting changes, determing when to re-render, makes complex feature simpler
     const squares = this.state.squares.slice();
     squares[i] = 'X';
     this.setState({squares: squares});
